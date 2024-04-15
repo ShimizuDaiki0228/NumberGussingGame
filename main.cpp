@@ -5,11 +5,12 @@
 
 int main(void)
 {
+	const int NUM_MAX = 99;
 	printf("私が思い浮かべる数を当てましょう。\n");
-	printf("その数は1～99のいずれかの整数です。\n");
+	printf("その数は1～%dのいずれかの整数です。\n", NUM_MAX);
 
 	srand((unsigned int)time(NULL));
-	int _correctAns = rand() % 99 + 1;
+	int _correctAns = rand() % NUM_MAX + 1;
 	
 	int _ans;
 	int _count = 0;
